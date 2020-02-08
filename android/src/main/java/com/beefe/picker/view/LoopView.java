@@ -287,30 +287,30 @@ public class LoopView extends View {
     }
 
     protected final void drawText(Canvas canvas, String text, float posX, float posY, Paint paint) {
-        StringBuffer stringBuffer = new StringBuffer();
-        char[] array = text.toCharArray();
-        int sum = 0;
-        for(int i=0;i<array.length;i++){
-            if(sum >= (textEllipsisLen * 2)){
-                break;
-            }
-            char bt = array[i];
-            if(bt > 127 || bt == 94){
-                sum += 2;
-            }
-            else{
-                sum ++;
-            }
-            stringBuffer.append(String.valueOf(bt));
-        }
-        String string = "";
-        if(array.length != stringBuffer.toString().toCharArray().length){
-            string = stringBuffer.toString() + "...";
-        }
-        else{
-            string = text;
-        }
-        canvas.drawText(string, posX, posY, paint);
+        // StringBuffer stringBuffer = new StringBuffer();
+        // char[] array = text.toCharArray();
+        // int sum = 0;
+        // for(int i=0;i<array.length;i++){
+        //     if(sum >= (textEllipsisLen * 2)){
+        //         break;
+        //     }
+        //     char bt = array[i];
+        //     if(bt > 127 || bt == 94){
+        //         sum += 2;
+        //     }
+        //     else{
+        //         sum ++;
+        //     }
+        //     stringBuffer.append(String.valueOf(bt));
+        // }
+        // String string = "";
+        // if(array.length != stringBuffer.toString().toCharArray().length){
+        //     string = stringBuffer.toString() + "...";
+        // }
+        // else{
+        //     string = text;
+        // }
+        canvas.drawText(text, posX, posY, paint);
     }
 
     @Override
